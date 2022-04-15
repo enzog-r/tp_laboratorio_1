@@ -10,8 +10,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "funciones.h"
 
-int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+
+
+
+int main()
+{
+    setbuf(stdout, NULL);
+    menu();
+
+    return 0;
 }

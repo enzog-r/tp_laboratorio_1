@@ -1,0 +1,89 @@
+/*
+ * funciones.h
+ *
+ *  Created on: 12 abr 2022
+ *      Author: User
+ */
+
+#ifndef FUNCIONES_H_
+#define FUNCIONES_H_
+
+/// @brief
+///
+/// @return
+int menu();
+
+
+/// @brief
+///
+/// @param x
+void confirmar(char *x);
+
+
+/// @brief
+///
+void informarNoEsNumero();
+
+
+/// @brief
+///
+/// @param pFlag
+/// @param x
+/// @return
+int ingreseKm(int* pFlag, int* x);
+
+
+/// @brief
+///
+/// @param flagKm
+/// @param pFlag
+/// @param y
+/// @param z
+/// @return
+int ingreseVuelos(int flagKm, int* pFlag, float* y, float* z);
+
+
+/// @brief
+///
+/// @param flagKm
+/// @param flagVuelos
+/// @param pFlag
+/// @param y
+/// @param z
+/// @param x
+/// @param rDescuentoAero
+/// @param rInteresAero
+/// @param rDescuentoLatam
+/// @param rInteresLatam
+/// @param rBitcoinAero
+/// @param rBitcoinLatam
+/// @param precioUnitarioAero
+/// @param precioUnitarioLatam
+/// @param difPrecio
+/// @return
+int calcularCostos(int flagKm, int flagVuelos,int* pFlag,float y, float z, int x, float* rDescuentoAero,float* rInteresAero, float* rDescuentoLatam, float* rInteresLatam, float* rBitcoinAero, float* rBitcoinLatam, float* precioUnitarioAero, float* precioUnitarioLatam, float* difPrecio);
+
+
+/// @brief
+///
+/// @param flagKm
+/// @param flagVuelos
+/// @param flagCalculos
+/// @param rDesA
+/// @param rDesL
+/// @param rInteresA
+/// @param rInteresL
+/// @param rBitA
+/// @param rBitL
+/// @param preUniA
+/// @param preUniL
+/// @param difPre
+void informarResultados(int flagKm, int flagVuelos, int flagCalculos, float rDesA, float rDesL, float rInteresA, float rInteresL, float rBitA, float rBitL, float preUniA, float preUniL, float difPre);
+
+
+/// @brief
+///
+void cargaForzada();
+
+#endif /* FUNCIONES_H_ */
+

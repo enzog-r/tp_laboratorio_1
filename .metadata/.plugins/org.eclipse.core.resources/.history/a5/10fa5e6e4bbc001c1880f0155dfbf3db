@@ -1,0 +1,143 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 12 abr 2022
+ *      Author: User
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+
+int menu()
+{
+    int opcion;
+    int cant;
+    int flagKm = 0;
+	int kilometro = 0;
+	char salir = 'n';
+
+
+		if(flagKm == 1)
+		{
+			 printf("\n\n!!!Menu de opciones!!!\n\n");
+					    printf("1- Ingresar kilometros: (km = %d)\n",kilometro);
+					    printf("2- Ingresar Precio de Vuelos: (Aerolineas = y, Latam = x) \n");//, flagAero, flagLat);
+					    printf("-Precio vuelo Aerolineas: x\n");//, precioAero);
+					    printf("-Precio vuelo Latam: x\n");//, precioLat);
+					    printf("3- Calcular todos los costos: \n");
+					    printf("a) Tarjeta de debito (descuento 10 por ciento)\n");
+					    printf("b) Tarjeta de credito (interes 25 por ciento)\n");
+					    printf("c) Bitcoin (1 BTC -> 4606954.55 pesos Argentinos\n");
+					    printf("d) Mostrar precio por km (precio unitario\n");
+					    printf("e) Mostrar diferencia de precio ingresada (Latam - Aerolineas)\n");
+					    printf("4- Informar Resultados\n");
+					    printf("Latam:\n");
+					    printf("a) Precio con tarjeta de debito: r\n");
+					    printf("b) Precio con tarjeta de credito: r\n");
+					    printf("c) Precio pagando con bitcoin : r\n");
+					    printf("d) Precio unitario: r\n");
+					    printf("Aerolineas:\n");
+					    printf("a) Precio con tarjeta de debito: r\n");
+					    printf("b) Precio con tarjeta de credito: r\n");
+					    printf("c) Precio pagando con bitcoin : r\n");
+					    printf("d) Precio unitario: r\n");
+					    printf("La diferencia de precio es : r\n");
+					    printf("5- Carga forzada de datos\n");
+					    printf("6- Salir\n");
+		}
+		    printf("\n\n!!!Menu de opciones!!!\n\n");
+		    printf("1- Ingresar kilometros: (km = x)\n");
+		    printf("2- Ingresar Precio de Vuelos: (Aerolineas = y, Latam = x) \n");//, flagAero, flagLat);
+		    printf("-Precio vuelo Aerolineas: x\n");//, precioAero);
+		    printf("-Precio vuelo Latam: x\n");//, precioLat);
+		    printf("3- Calcular todos los costos: \n");
+		    printf("a) Tarjeta de debito (descuento 10 por ciento)\n");
+		    printf("b) Tarjeta de credito (interes 25 por ciento)\n");
+		    printf("c) Bitcoin (1 BTC -> 4606954.55 pesos Argentinos\n");
+		    printf("d) Mostrar precio por km (precio unitario\n");
+		    printf("e) Mostrar diferencia de precio ingresada (Latam - Aerolineas)\n");
+		    printf("4- Informar Resultados\n");
+		    printf("Latam:\n");
+		    printf("a) Precio con tarjeta de debito: r\n");
+		    printf("b) Precio con tarjeta de credito: r\n");
+		    printf("c) Precio pagando con bitcoin : r\n");
+		    printf("d) Precio unitario: r\n");
+		    printf("Aerolineas:\n");
+		    printf("a) Precio con tarjeta de debito: r\n");
+		    printf("b) Precio con tarjeta de credito: r\n");
+		    printf("c) Precio pagando con bitcoin : r\n");
+		    printf("d) Precio unitario: r\n");
+		    printf("La diferencia de precio es : r\n");
+		    printf("5- Carga forzada de datos\n");
+		    printf("6- Salir\n");
+
+
+    printf("Ingrese una opcion: ");
+    fflush(stdin);
+    cant = scanf("%d", &opcion);
+    	if(cant == 0)
+    	{
+    		opcion = 7;
+    	}
+
+    	 do
+    	    {
+    	        switch (opcion)
+    	        {
+    	        case 1:
+    	        	ingreseKm(&flagKm,kilometro);
+    	            break;
+    	        case 2:
+    	            break;
+    	        case 3:
+    	            break;
+    	        case 4:
+
+    	            break;
+    	        case 5:
+    	            break;
+    	        case 6:
+    	            confirmar(&salir);
+    	            break;
+    	        case 7:
+    	        	informarNoEsNumero();
+    	        	break;
+    	        default:
+    	            printf("Opcion invalida\n");
+    	        }
+    	    } while (salir != 's');
+
+
+    return opcion;
+}
+
+/*int subMenu()
+{
+	return
+}*/
+
+void confirmar(char *x)
+{
+    printf("Confirme salida:");
+    fflush(stdin);
+    scanf("%c", x);
+}
+void informarNoEsNumero()
+{
+	printf("eso no es un numero\n");
+}
+int ingreseKm(int* pFlag,int x)
+{
+	int okey = 0;
+
+	if(okey != 0)
+	{
+		printf("ingrese kilometros: ");
+		scanf("%d", x);
+		okey = 1;
+		*pFlag = 1;
+	}
+	return okey;
+}
+

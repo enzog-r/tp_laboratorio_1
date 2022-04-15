@@ -1,0 +1,90 @@
+/*
+ ============================================================================
+ Name        : TP1.c
+ Author      : Enzo Galvan Rodriguez
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int menu();
+void confirmar(char *x);
+
+int main()
+{
+    setbuf(stdout, NULL);
+    char salir = 'n';
+
+    do
+    {
+        switch (menu())
+        {
+        case 1:
+            printf("Opcion 1!!!\n");
+            break;
+        case 2:
+            printf("Opcion 2!!!\n");
+            break;
+        case 3:
+            printf("Opcion 3!!!\n");
+            break;
+        case 4:
+
+            break;
+        case 5:
+            break;
+        case 6:
+            confirmar(&salir);
+            break;
+        default:
+            printf("Opcion invalida");
+        }
+    } while (salir != 's');
+
+    return 0;
+}
+
+int menu()
+{
+    int opcion;
+
+    printf("\n\n!!!Menu de opciones!!!\n\n");
+    printf("1- Ingresar kilometros: (km = %d)\n", flagKm);
+    printf("2- Ingresar Precio de Vuelos: (Aerolineas = %d, Latam = %d) \n", flagAero, flagLat);
+    printf("-Precio vuelo Aerolineas: %d\n", precioAero);
+    printf("-Precio vuelo Latam: %d\n", precioLat);
+    printf("3- Calcular todos los costos: \n");
+    printf("a) Tarjeta de debito (descuento 10%)\n");
+    printf("b) Tarjeta de credito (interes 25%)\n");
+    printf("c) Bitcoin (1 BTC -> 4606954.55 pesos Argentinos\n");
+    printf("d) Mostrar precio por km (precio unitario\n");
+    printf("e) Mostrar diferencia de precio ingresada (Latam - Aerolineas)\n");
+    printf("4- Informar Resultados\n");
+    printf("Latam:\n");
+    printf("a) Precio con tarjeta de debito: r\n");
+    printf("b) Precio con tarjeta de credito: r\n");
+    printf("c) Precio pagando con bitcoin : r\n");
+    printf("d) Precio unitario: r\n");
+    printf("Aerolineas:\n");
+    printf("a) Precio con tarjeta de debito: r\n");
+    printf("b) Precio con tarjeta de credito: r\n");
+    prinrf("c) Precio pagando con bitcoin : r\n");
+    printf("d) Precio unitario: r\n");
+    printf("La diferencia de precio es : r\n");
+    printf("5- Carga forzada de datos\n");
+    printf("6- Salir\n");
+    printf("Ingrese una opcion: ");
+    scanf("%d", &opcion);
+
+    return opcion;
+}
+
+void confirmar(char *x)
+{
+    printf("Confirme salida:");
+    fflush(stdin);
+    scanf("%c", x);

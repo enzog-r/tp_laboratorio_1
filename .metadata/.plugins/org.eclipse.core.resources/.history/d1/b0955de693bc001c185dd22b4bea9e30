@@ -1,0 +1,24 @@
+/*
+ * funciones.h
+ *
+ *  Created on: 12 abr 2022
+ *      Author: User
+ */
+
+#ifndef FUNCIONES_H_
+#define FUNCIONES_H_
+
+int menu();
+void confirmar(char *x);
+void informarNoEsNumero();
+int ingreseKm(int* pFlag, int* x);
+int ingreseVuelos(int flagKm, int* pFlag, float* y, float* z);
+
+int calcularCostos(int flagKm, int flagVuelos,int* pFlag,float y, float z, int x, float* rDescuentoAero,float* rInteresAero,
+				float* rDescuentoLatam, float* rInteresLatam, float* rBitcoinAero, float* rBitcoinLatam, float* precioUnitarioAero, float* precioUnitarioLatam, float* difPrecio);
+
+void informarResultados(int flagKm, int flagVuelos, int flagCalculos, float rDesA, float rDesL, float rInteresA, float rInteresL,
+		float rBitA, float rBitL, float preUniA, float preUniL, float difPre);
+
+#endif /* FUNCIONES_H_ */
+
